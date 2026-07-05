@@ -105,8 +105,8 @@ const NavBar = () => {
                 </div>
 
                 {/* Typography */}
-                <span className="font-special text-2xl md:text-3xl font-bold tracking-wide text-foreground transition-colors duration-300 group-hover:text-foreground/90">
-                  KH
+                <span className="font-special text-2xl md:text-3xl font-bold tracking-wide text-foreground transition-colors duration-300 group-hover:text-foreground/90 mr-1">
+                  Khalid   <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-brand)" }}>Hossain</span>
                 </span>
               </Link>
             </div>
