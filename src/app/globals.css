@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  /* =========================
+     BACKGROUND SYSTEM
+  ========================= */
+  --background: #080b05;
+  --background-surface: #10190d;
+  --background-elevated: #1e3f19;
+
+  /* =========================
+     TEXT SYSTEM
+  ========================= */
+  --foreground: #e8f5e6;
+  --foreground-muted: #a3b59c;
+  --foreground-dim: #6f8a67;
+
+  /* =========================
+     BRAND COLORS
+  ========================= */
+  --primary: #67e64c; /* neon green */
+  --primary-dark: #3fbf2d;
+
+  --secondary: #22c55e; /* balanced green */
+  --accent: #38bdf8; /* cyan for contrast */
+
+  /* =========================
+     SURFACES / UI ELEMENTS
+  ========================= */
+  --surface-1: #0f160c;
+  --surface-2: #10190d;
+  --surface-3: #1e3f19;
+
+  /* =========================
+     BORDER SYSTEM
+  ========================= */
+  --border: #22301c;
+  --border-strong: #2e4a26;
+
+  /* =========================
+     GLOW EFFECTS
+  ========================= */
+  --glow-primary: 0 0 20px rgba(103, 230, 76, 0.45);
+  --glow-accent: 0 0 20px rgba(56, 189, 248, 0.35);
+  --glow-soft: 0 0 30px rgba(103, 230, 76, 0.15);
+
+  /* =========================
+     GRADIENTS
+  ========================= */
+  --gradient-brand: linear-gradient(
+    135deg,
+    #67e64c 0%,
+    #22c55e 50%,
+    #38bdf8 100%
+  );
+
+  --gradient-dark: linear-gradient(180deg, #080b05 0%, #10190d 100%);
+
+  /* =========================
+     TYPOGRAPHY
+  ========================= */
+  --font-primary: var(--font-ubuntu);
+  --font-secondary: var(--font-inter);
+  --font-special: var(--font-playfair-display);
+  --font-mono: var(--font-mono);
+}
+
+/* =========================
+   TAILWIND THEME MAPPING
+========================= */
+@theme inline {
+  --color-background: var(--background);
+  --color-background-surface: var(--background-surface);
+
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+
+  --color-border: var(--border);
+
+  --font-primary: var(--font-primary);
+  --font-secondary: var(--font-secondary);
+  --font-special: var(--font-special);
+  --font-mono: var(--font-mono);
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-primary);
+}
+
+
+
+.custom-max-width{
+  max-width: 1400px;
+}
+
+
+/* =======================================
+   CUSTOM NEON CURSOR FOR GRADIENT TEXT
+======================================= */
+.glowing-cursor::after {
+  content: ''; /* Empty content so we can draw a custom shape */
+  display: inline-block;
+  
+  /* Precision sizing - adjust width to change thickness */
+  width: 3px; 
+  height: 1.1em; /* Dynamically matches your text height perfectly */
+  vertical-align: -0.15em; /* Perfectly aligns the baseline with large text */
+  margin-left: 8px;
+  
+  /* Color & Glow */
+  background-color: var(--primary) !important;
+  box-shadow: var(--glow-primary); 
+  
+  /* Animation */
+  animation: cursorBlink 1s step-start infinite;
+}
+
+@keyframes cursorBlink {
+  50% { opacity: 0; }
+}
