@@ -49,7 +49,7 @@ function DetailSection({
   return (
     <motion.section
       variants={itemVariants}
-      className="rounded-2xl border border-border bg-gradient-to-br from-[var(--surface-2)] to-background p-6 shadow-md"
+      className="rounded-2xl border border-border bg-gradient-to-br from-[var(--surface-2)] to-background p-6 shadow-md pt-12 lg:pt-14"
     >
       <div className="mb-4 flex items-center gap-3">
         <span className="text-2xl text-primary">{icon}</span>
@@ -60,9 +60,7 @@ function DetailSection({
   );
 }
 
-/* ------------------------------------------------------------------ */
-/* Main component (Arrow Function Style)                             */
-/* ------------------------------------------------------------------ */
+
 const ProjectDetailView = ({ project }: { project: Project }) => {
   return (
     <motion.main

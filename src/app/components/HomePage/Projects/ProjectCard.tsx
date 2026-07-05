@@ -33,7 +33,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <motion.article
       variants={cardVariants}
-      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-[var(--surface-2)] to-background shadow-2xl shadow-black/30 transition-all duration-300 hover:border-primary/40 hover:from-[var(--surface-3)] hover:shadow-[var(--glow-soft)]"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-[var(--surface-2)] to-background shadow-2xl shadow-black/30 transition-all duration-300 hover:border-primary/40 hover:from-[var(--surface-3)] hover:shadow-[var(--glow-soft)] mt-12"
     >
       {/* Image — hover pans top to bottom, like a scrolling screenshot */}
       <div
@@ -77,7 +77,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <div className="mt-6 text-center sm:text-left">
           <Link
             href={`/projects/${project.id}`}
-            className="inline-block w-full rounded-full border border-primary px-5 py-3 text-sm font-bold text-foreground transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-background "
+            className="inline-block w-full rounded-full border border-primary px-5 py-3 text-sm font-bold text-foreground transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-background text-center"
           >
             View Details
           </Link>

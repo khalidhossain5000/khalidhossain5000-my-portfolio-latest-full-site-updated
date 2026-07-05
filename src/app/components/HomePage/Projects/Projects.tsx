@@ -34,7 +34,7 @@ const Projects = () => {
     <section id="projects" className="relative overflow-hidden py-20 sm:py-28">
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-accent/20 blur-[130px]"
+        className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-accent/20 blur-[130px] "
         animate={shouldReduceMotion ? undefined : { opacity: [0.4, 0.8, 0.4] }}
         transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -70,7 +70,7 @@ const Projects = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 "
           initial={shouldReduceMotion ? undefined : 'hidden'}
           whileInView={shouldReduceMotion ? undefined : 'show'}
           viewport={{ once: true, amount: 0.15 }}
