@@ -49,7 +49,7 @@ function DetailSection({
   return (
     <motion.section
       variants={itemVariants}
-      className="rounded-2xl border border-border bg-gradient-to-br from-[var(--surface-2)] to-background p-6 shadow-md pt-12 lg:pt-14"
+      className="rounded-2xl border border-border bg-gradient-to-br from-[var(--surface-2)] to-background p-6 shadow-md pt-12 lg:pt-22"
     >
       <div className="mb-4 flex items-center gap-3">
         <span className="text-2xl text-primary">{icon}</span>
@@ -67,7 +67,7 @@ const ProjectDetailView = ({ project }: { project: Project }) => {
       initial="hidden"
       animate="show"
       variants={containerVariants}
-      className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:py-20"
+      className="mx-auto max-w-6xl py-22 px-4 "
     >
       {/* ---------- Hero / Header ---------- */}
       <motion.div
@@ -79,7 +79,7 @@ const ProjectDetailView = ({ project }: { project: Project }) => {
           alt={project.name}
           width={1200}
           height={600}
-          className="h-64 w-full object-cover sm:h-80 md:h-96"
+          className="h-full w-full object-cover sm:h-80 md:h-96 lg:h-full"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
@@ -161,10 +161,10 @@ const ProjectDetailView = ({ project }: { project: Project }) => {
             href={project.links.live}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-bold text-background transition-transform hover:scale-105 hover:shadow-[var(--glow-primary)]"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-bold text-background transition-transform hover:scale-105 hover:shadow-[var(--glow-primary)] w-full lg:w-auto text-center"
           >
             <FiExternalLink />
-            Live Demo
+            Live Site
           </Link>
         )}
         {project.links.clientRepo && (
@@ -172,10 +172,10 @@ const ProjectDetailView = ({ project }: { project: Project }) => {
             href={project.links.clientRepo}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-primary px-6 py-3 font-bold text-primary transition-all hover:bg-primary hover:text-background"
+            className="inline-flex items-center gap-2 rounded-full border border-primary px-6 py-3 font-bold text-primary transition-all hover:bg-primary hover:text-background text-center w-full lg:w-auto mx-auto"
           >
             <FiGithub />
-            Client Repository
+            Github Repository
           </Link>
         )}
       </motion.div>
