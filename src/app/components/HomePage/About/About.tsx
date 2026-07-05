@@ -115,7 +115,7 @@ const About: React.FC = () => {
           
           {/* Left Column: Streamlined, Highly Professional Programming Journey */}
           <motion.div className="lg:col-span-7 space-y-5" variants={fadeInUp}>
-            <div className="flex items-center gap-2.5 text-primary font-semibold font-secondary tracking-wide uppercase text-sm">
+            <div className="flex items-center gap-2.5 text-primary font-semibold font-secondary tracking-wide uppercase text-sm ">
               <Terminal className="h-4 w-4 hidden sm:block" />
               <span>The Codebase Evolution</span>
             </div>
@@ -146,7 +146,7 @@ const About: React.FC = () => {
             
             {/* Card 1: Work I Enjoy */}
             <motion.div 
-              className="p-5 bg-surface-1/40 backdrop-blur-md border border-border-strong rounded-xl flex gap-4 transition-colors duration-300 hover:bg-surface-1/80 shadow-sm"
+              className="p-5 bg-surface-1/40 backdrop-blur-md border border-[#65e24b]  border-border-strong rounded-xl flex gap-4 transition-colors duration-300 hover:bg-surface-1/80 shadow-sm"
               variants={cardHover}
               whileHover="hover"
             >
@@ -165,7 +165,7 @@ const About: React.FC = () => {
 
             {/* Card 2: Creative Pursuits */}
             <motion.div 
-              className="p-5 bg-surface-1/40 backdrop-blur-md border border-border-strong rounded-xl flex gap-4 transition-colors duration-300 hover:bg-surface-1/80 shadow-sm"
+              className="p-5 bg-surface-1/40 backdrop-blur-md border border-[#65e24b]  border-border-strong rounded-xl flex gap-4 transition-colors duration-300 hover:bg-surface-1/80 shadow-sm"
               variants={cardHover}
               whileHover="hover"
             >
@@ -184,7 +184,7 @@ const About: React.FC = () => {
 
             {/* Card 3: Keeping Active */}
             <motion.div 
-              className="p-5 bg-surface-1/40 backdrop-blur-md border border-border-strong rounded-xl flex gap-4 transition-colors duration-300 hover:bg-surface-1/80 shadow-sm"
+              className="p-5 bg-surface-1/40 backdrop-blur-md border border-[#65e24b] border-border-strong rounded-xl flex gap-4 transition-colors duration-300 hover:bg-surface-1/80 shadow-sm"
               variants={cardHover}
               whileHover="hover"
             >

@@ -90,40 +90,47 @@
 /* =========================
    BASE STYLES
 ========================= */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-primary);
 }
 
-
-
-.custom-max-width{
-  max-width: 1400px;
+section[id] {
+  scroll-margin-top: 100px;
 }
 
+.custom-max-width {
+  max-width: 1400px;
+}
 
 /* =======================================
    CUSTOM NEON CURSOR FOR GRADIENT TEXT
 ======================================= */
 .glowing-cursor::after {
-  content: ''; /* Empty content so we can draw a custom shape */
+  content: ""; /* Empty content so we can draw a custom shape */
   display: inline-block;
-  
+
   /* Precision sizing - adjust width to change thickness */
-  width: 3px; 
+  width: 3px;
   height: 1.1em; /* Dynamically matches your text height perfectly */
   vertical-align: -0.15em; /* Perfectly aligns the baseline with large text */
   margin-left: 8px;
-  
+
   /* Color & Glow */
   background-color: var(--primary) !important;
-  box-shadow: var(--glow-primary); 
-  
+  box-shadow: var(--glow-primary);
+
   /* Animation */
   animation: cursorBlink 1s step-start infinite;
 }
 
 @keyframes cursorBlink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }

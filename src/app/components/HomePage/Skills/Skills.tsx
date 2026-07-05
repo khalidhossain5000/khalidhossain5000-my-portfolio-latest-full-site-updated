@@ -108,11 +108,9 @@ const Skills = () => {
   };
 
   return (
-    <section className="relative w-full py-20 overflow-hidden bg-background">
+    <section id="skills" className="relative w-full py-20 overflow-hidden bg-background">
 
-      {/* =========================
-          🌌 ENHANCED BACKGROUND GLOW SYSTEM
-      ========================= */}
+    
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Base gradient wash */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background-surface to-background opacity-90" />

@@ -7,6 +7,7 @@ import { FaPhoneAlt, FaSpinner } from "react-icons/fa";
 import { GrLocation } from "react-icons/gr";
 import { IoMdMailUnread } from "react-icons/io";
 import { motion } from "framer-motion";
+import Title from "../../shared/Title/Title";
 
 const ContactMe = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -66,7 +67,7 @@ const ContactMe = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
-      className="px-3 lg:px-3 xl:px-0 border-t border-border flex flex-col lg:flex-row gap-3 md:gap-6 container mx-auto py-24 md:py-32 xl:py-36"
+      className="px-3 lg:px-3 xl:px-0 border-t border-border flex flex-col lg:flex-row gap-3 md:gap-6 custom-max-width mx-auto py-24 md:py-32 xl:py-36 "
     >
       {/* Left side - contact info */}
       <div className="cnts flex-1 w-full">
@@ -80,8 +81,13 @@ const ContactMe = () => {
           variants={itemVariants}
           className="text-center lg:text-left font-primary text-2xl md:text-4xl lg:text-5xl text-foreground font-bold"
         >
-          Got a Project? Let&apos;s Chat!
+          Got a Project?
+            <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-brand)" }}> Let&apos;s Chat!</span>
         </motion.h1>
+
+       
+
+        {/* title neds */}
         <motion.p
           variants={itemVariants}
           className="mt-6 md:mt-12 text-center lg:text-left font-secondary text-foreground-muted text-[17px] md:text-xl"

@@ -10,7 +10,7 @@ import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { HiMail } from "react-icons/hi";
 
 const Banner: React.FC = () => {
-  // টেক্সট অ্যানিমেশন ভ্যারিয়েন্ট (Explicitly typed as Variants)
+
   const fadeInLeft: Variants = {
     hidden: { opacity: 0, x: -60 },
     visible: {
@@ -20,13 +20,12 @@ const Banner: React.FC = () => {
     },
   };
 
-  // চাইল্ড অ্যানিমেশন ভ্যারিয়েন্ট (Explicitly typed as Variants)
+  // Explicitly typed as Variants)
   const childVariant: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  // ইমেজ অ্যানিমেশন - ফ্লোটিং সহ (Explicitly typed as Variants)
   const imageVariants: Variants = {
     hidden: { opacity: 0, scale: 0.9, rotate: -2 },
     visible: {
@@ -133,7 +132,7 @@ const Banner: React.FC = () => {
             >
               {/* GitHub */}
               <motion.a
-                href="https://github.com"
+                href="https://github.com/khalidhossain5000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-surface-1 border-2 border-border-strong text-foreground-muted rounded-xl transition-colors duration-300 flex items-center justify-center hover:text-primary hover:border-primary"
@@ -149,7 +148,7 @@ const Banner: React.FC = () => {
 
               {/* LinkedIn */}
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/md-khalid-hossain-s"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-surface-1 border-2 border-border-strong text-foreground-muted rounded-xl transition-colors duration-300 flex items-center justify-center hover:text-primary hover:border-primary"
@@ -164,7 +163,7 @@ const Banner: React.FC = () => {
               </motion.a>
 
               {/* Twitter / X */}
-              <motion.a
+              {/* <motion.a
                 href="https://x.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -177,7 +176,7 @@ const Banner: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <FaXTwitter className="h-5 w-5" />
-              </motion.a>
+              </motion.a> */}
             </motion.div>
 
             {/* CTA Buttons */}

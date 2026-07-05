@@ -4,6 +4,7 @@ import React from 'react';
 import { motion, useReducedMotion, type Variants } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import { projects } from './projects-data';
+import Title from '../../shared/Title/Title';
 
 const containerVariants: Variants = {
   hidden: {},
@@ -13,6 +14,17 @@ const containerVariants: Variants = {
 const headingVariants: Variants = {
   hidden: { opacity: 0, y: 16 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+};
+
+
+
+const defaultRevealVariant: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 const Projects = () => {
@@ -41,15 +53,20 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.4 }}
           variants={headingVariants}
         >
-          <span className="font-mono text-sm font-medium tracking-widest text-primary">
-        
-          </span>
-          <h2 className="mt-3 font-primary text-3xl font-bold text-foreground sm:text-4xl">
-            Featured Projects
-          </h2>
-          <p className="mt-4 text-sm text-foreground-muted sm:text-base">
-            A selection of full-stack applications I&apos;ve designed, built, and shipped end to end.
+       
+           <p className="text-primary font-medium font-secondary tracking-[0.2em] uppercase mb-2 text-center">
+            Projects log
           </p>
+          <h1
+               className={`font-special text-4xl sm:text-5xl xl:text-6xl  font-bold text-foreground leading-[1.15] mb-2 text-center mr-1`}
+            
+             >
+              Featured <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-brand)" }}>Projects</span>
+               
+             </h1>
+
+
+             
         </motion.div>
 
         <motion.div

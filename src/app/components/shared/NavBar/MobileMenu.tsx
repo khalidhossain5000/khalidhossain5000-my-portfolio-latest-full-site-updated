@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import { X } from 'lucide-react';
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { X } from "lucide-react";
 
 interface NavLink {
   name: string;
@@ -14,9 +14,20 @@ interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
   navLinks: NavLink[];
+  activeSection: string;
+  onNavClick: (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => void;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navLinks }) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({
+  isOpen,
+  onClose,
+  navLinks,
+  activeSection,
+  onNavClick,
+}) => {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -32,10 +43,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navLinks }) =>
 
           {/* Slide Drawer */}
           <motion.div
-            initial={{ x: '100%' }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-background-elevated border-l border-border-strong z-50 p-6 flex flex-col md:hidden shadow-2xl"
           >
             {/* Close Button */}
@@ -49,23 +60,36 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navLinks }) =>
             </div>
 
             {/* Mobile Nav Links */}
-            <nav className="flex flex-col space-y-6 flex-grow">
-              {navLinks.map((link, index) => (
-                <motion.div
-                  key={link.name}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 * index }}
-                >
-                  <Link
-                    href={link.href}
-                    onClick={onClose}
-                    className="font-special text-2xl text-foreground hover:text-primary transition-colors block"
+            <nav className="flex flex-col space-y-6 grow">
+              {navLinks.map((link, index) => {
+                const isActive =
+                  activeSection === link.href.replace("#", "") ||
+                  (link.href === "#home" && activeSection === "home");
+
+                return (
+                  <motion.div
+                    key={link.name}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 * index }}
                   >
-                    {link.name}
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link
+                      href={link.href}
+                      onClick={(event) => {
+                        onNavClick(event, link.href);
+                        onClose();
+                      }}
+                      className={`block font-special text-2xl transition-colors ${
+                        isActive
+                          ? "text-primary"
+                          : "text-foreground hover:text-primary"
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </nav>
 
             {/* Mobile CTA */}
@@ -74,7 +98,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navLinks }) =>
                 href="#resume"
                 onClick={onClose}
                 className="flex justify-center w-full py-3.5 rounded-lg bg-primary text-background font-primary font-bold text-lg tracking-wide hover:bg-primary-dark transition-colors"
-                style={{ boxShadow: 'var(--glow-primary)' }}
+                style={{ boxShadow: "var(--glow-primary)" }}
               >
                 Download Resume
               </Link>
