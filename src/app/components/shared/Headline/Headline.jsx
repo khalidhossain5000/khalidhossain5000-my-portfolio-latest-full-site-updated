@@ -2,7 +2,7 @@ import React from "react";
 import { FaAsterisk } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 
-const Headline = () => {
+const Headlines = () => {
   return (
     <div className="headline bg-[#13ff3d] text-black ">
       <div
@@ -86,4 +86,4 @@ const Headline = () => {
   );
 };
 
-export default Headline;
+export default Headlines;
