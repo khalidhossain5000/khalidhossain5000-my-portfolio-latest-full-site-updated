@@ -77,7 +77,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <div className="mt-6 text-center sm:text-left">
           <Link
             href={`/projects/${project.id}`}
-            className="inline-block w-full rounded-full border border-primary px-5 py-3 text-sm font-bold text-foreground transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-background sm:w-auto"
+            className="inline-block w-full rounded-full border border-primary px-5 py-3 text-sm font-bold text-foreground transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-background "
           >
             View Details
           </Link>

@@ -8,8 +8,8 @@
 import type { StaticImageData } from 'next/image';
 
 import projecti from '@/assets/ProjectImg/p-i-small-one.png';
-import projectii from '@/assets/ProjectImg/villa-x-project-ii.png';
-import projectiii from '@/assets/ProjectImg/book-hive.png';
+import projectii from '@/assets/ProjectImg/p-ii-small-one.png';
+import projectiii from '@/assets/ProjectImg/p-iii-small-one.png';
 
 export interface ProjectLinks {
   live?: string;
@@ -48,7 +48,7 @@ export const projects: Project[] = [
       'Admin dashboard for user and article control',
     ],
     techStack: ['React', 'Tailwind CSS', 'React Router', 'Node.js', 'Express.js', 'MongoDB', 'Firebase'],
-    links: { live: '#', clientRepo: '#', serverRepo: '#' },
+    links: { live: 'https://the-voice-daily-newspaper-polished.netlify.app', clientRepo: 'https://github.com/khalidhossain5000/newspaper-web-app-polished-client-side', serverRepo: '#' },
     detailedDescription:
       'The Voice Daily is a full-featured newspaper web application that allows editors to publish articles, manage categories, and offer premium content to subscribers. The platform includes role-based authentication, a rich text editor for articles, and a payment gateway integration for subscriptions.',
     challenges: [
@@ -79,7 +79,7 @@ export const projects: Project[] = [
       'Role-based authentication for Admin, Host, and Guest',
     ],
     techStack: ['Next.js', 'Redux', 'Zod', 'Mongoose', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'Firebase'],
-    links: { live: '#', clientRepo: '#', serverRepo: '#' },
+    links: { live: 'https://villa-x-nextjs-client-side.vercel.app', clientRepo: 'https://github.com/khalidhossain5000/villa-x-nextjs-client-side', serverRepo: '#' },
     detailedDescription:
       'VillaX is a comprehensive room booking platform where hosts can list properties, guests can search and book rooms, and admins oversee the entire ecosystem. The application features an interactive map, real-time availability calendar, and integrated Stripe payments.',
     challenges: [
@@ -110,7 +110,7 @@ export const projects: Project[] = [
       'Private routes secured with Firebase authentication',
     ],
     techStack: ['Next.js', 'Tailwind CSS', 'Shadcn', 'Node.js', 'Express.js', 'MongoDB', 'Firebase'],
-    links: { live: '#', clientRepo: '#', serverRepo: '#' },
+    links: { live: 'https://book-hive-library-management-system.vercel.app', clientRepo: 'https://github.com/khalidhossain5000/book-hive-libray-client-side', serverRepo: '#' },
     detailedDescription:
       'BookHive streamlines library operations by allowing librarians to add and categorise books, track borrowing and returns, and manage user accounts. The system enforces borrowing limits and sends email reminders for overdue items.',
     challenges: [
