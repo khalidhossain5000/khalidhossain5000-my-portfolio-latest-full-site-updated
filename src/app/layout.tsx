@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Ubuntu } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -38,7 +39,12 @@ export default function RootLayout({
       className={`${inter.variable} ${ubuntu.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">{children}
+        <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
+      </body>
     </html>
   );
 }
